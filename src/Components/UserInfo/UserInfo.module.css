@@ -1,0 +1,20 @@
+.card{
+    width: 300px;
+}
+.el{
+    background: lightblue;
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.df{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    background: #ffff14;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}

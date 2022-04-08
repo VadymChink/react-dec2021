@@ -13,6 +13,7 @@ export const Users = () => {
         <div className={'users'}>
             {
                 users && users.map((value) => <User key={value.id} user={value}/>)
+
             }
         </div>
     );

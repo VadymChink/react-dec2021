@@ -7,7 +7,7 @@ export const User = ({user,setUser,setUserIdForPosts}) => {
     return (
         <div className={styles.df }>
             <div className={styles.w250px}>ID:{id} Name: {name}</div>
-            <button className={styles.db} onClick={()=> {
+            <button className={styles.btn} onClick={()=> {
                 setUser(user)
                 setUserIdForPosts(null)
             }}>Info User</button>

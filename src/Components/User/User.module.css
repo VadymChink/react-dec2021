@@ -5,11 +5,20 @@
 }
 .w250px{
     width: 250px;
+    display: flex;
+    align-items: center;
 }
-.db{
+.btn{
     display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: cornflowerblue;
+    border-radius: 20px;
+    border:none;
+    font-size: 16px;
 }
 .df{
     display: flex;
     margin: 10px;
+
 }

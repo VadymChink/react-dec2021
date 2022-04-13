@@ -1,0 +1,11 @@
+
+import Joi from "joi";
+
+export const carValidator = Joi.object({
+    model: Joi.string().min(1).max(20).required().messages({
+        'string.empty': 'Model не може бути пустим',
+        'string.min': 'Model має бути більше ніж 1 символ'
+    }),
+    price: Joi.number().min(0).max(1000000).required(),
+    year: Joi.number().min(1900).max(new Date().getFullYear()).required()
+})

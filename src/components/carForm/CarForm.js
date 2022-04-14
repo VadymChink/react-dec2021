@@ -14,23 +14,24 @@ export const CarForm = ({setNewCar, updateCar}) => {
 
     useEffect(() => {
         if (updateCar) {
-            const {model,price,year } = updateCar
-            setValue('model',model)
-            setValue('price',price)
-            setValue('year',year)
+            const {model, price, year} = updateCar
+            setValue('model', model)
+            setValue('price', price)
+            setValue('year', year)
         }
-    }, [updateCar])
+    }, [updateCar,setValue])
     // const [formError, setFormError] = useState({});
 
     const mySubmit = async (car) => {
         // try {
-        if (updateCar){
-            await carsService.updateById(updateCar.id,car);
+        if (updateCar) {
+            const {data} = await carsService.updateById(updateCar.id, car);
+            setNewCar(data);
 
-        }else {
-        const {data} = await carsService.create(car);
-        setNewCar(data);
-        reset();
+        } else {
+            const {data} = await carsService.create(car);
+            setNewCar(data);
+            reset();
         }
         // } catch (e) {
         //     setFormError(e.response.data);

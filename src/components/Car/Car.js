@@ -1,5 +1,4 @@
 import {carsService} from "../../services";
-import {useEffect} from "react";
 
 export const Car = ({car, setCarDelete, setUpdateCar}) => {
     const {id, model, price, year} = car;

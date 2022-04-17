@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.button{
+    width: 80px;
+    color: crimson;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: red;
+    color: snow;
+}

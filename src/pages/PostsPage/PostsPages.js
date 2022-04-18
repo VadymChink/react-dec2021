@@ -3,7 +3,7 @@ import {postsService} from "../../services";
 import {Post} from "../../components";
 import {Outlet} from "react-router-dom";
 
-export const PostPages = () => {
+export const PostsPages = () => {
     const [posts,setPosts] = useState([]);
 
     useEffect(()=>{

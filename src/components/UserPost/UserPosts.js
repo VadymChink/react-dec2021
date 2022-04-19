@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const UserPosts = ({post}) => {
     const {userId, id, title, body} = post;
     return (

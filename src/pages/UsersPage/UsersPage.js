@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {Outlet} from "react-router-dom";
 
 import {usersService} from "../../services";
@@ -10,6 +10,7 @@ export const UsersPage = () => {
 
     useEffect(()=>{
         usersService.getAll().then(({data})=>setUsers(data))
+
     },[])
 
     return (

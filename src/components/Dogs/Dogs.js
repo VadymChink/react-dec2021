@@ -17,7 +17,9 @@ const Dogs = () => {
         <div>
             <input type="text" ref={name} placeholder={'Dog name'}/>
             <button onClick={() => newDog()}>save</button>
-            {state && state.map((dog) => <Dog key={dog.id} dog={dog} dispatch={dispatch}/>)}
+            <div style={{marginTop: "30px"}}>
+                {state && state.map((dog) => <Dog key={dog.id} dog={dog} dispatch={dispatch}/>)}
+            </div>
         </div>
     );
 };

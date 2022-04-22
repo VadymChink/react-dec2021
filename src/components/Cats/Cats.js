@@ -17,7 +17,10 @@ const Cats = () => {
         <div>
             <input type="text" ref={name} placeholder={'Cat name'}/>
             <button onClick={() => newCat()}>save</button>
-            {state && state.map((cat) => <Cat key={cat.id} cat={cat} dispatch={dispatch}/>)}
+            <hr style={{position: "absolute", width: '100%',top:'35px', left: '0'}}/>
+            <div style={{marginTop: "30px"}}>
+                {state && state.map((cat) => <Cat key={cat.id} cat={cat} dispatch={dispatch}/>)}
+            </div>
         </div>
     );
 };

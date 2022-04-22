@@ -14,18 +14,17 @@ const reduce = (state, action) => {
             return {...state, count1: 0}
         case 'set':
             return {...state, count1: action.payload}
-    }
-    switch (action.view) {
-        case 'inc':
+        case 'inc2':
             return {...state, count2: state.count2 + 1}
-        case 'dec':
+        case 'dec2':
             return {...state, count2: state.count2 - 1}
-        case 'reset':
+        case 'reset2':
             return {...state, count2: 0}
-        case 'set':
+        case 'set2':
             return {...state, count2: action.payload}
         default:
-            return {...state}
+            console.log('error');
+            return state;
     }
 }
 const App = () => {
@@ -40,10 +39,10 @@ const App = () => {
                 <button onClick={() => dispatch({type: 'set', payload: 20})}>set</button>
             </div>
             <div>{state.count2}
-                <button onClick={() => dispatch({view: 'inc'})}>inc</button>
-                <button onClick={() => dispatch({view: 'dec'})}>dec</button>
-                <button onClick={() => dispatch({view: 'reset'})}>reset</button>
-                <button onClick={() => dispatch({view: 'set', payload: 200})}>set</button>
+                <button onClick={() => dispatch({type: 'inc2'})}>inc</button>
+                <button onClick={() => dispatch({type: 'dec2'})}>dec</button>
+                <button onClick={() => dispatch({type: 'reset2'})}>reset</button>
+                <button onClick={() => dispatch({type: 'set2', payload: 200})}>set</button>
             </div>
         </div>
     );

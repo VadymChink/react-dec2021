@@ -1,6 +1,8 @@
 import {FC} from "react";
 
-import {Users} from "./Components";
+import {Users} from "./components";
+
+
 
 const App: FC = () => {
 

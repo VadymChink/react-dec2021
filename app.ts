@@ -1,7 +1,6 @@
 import {IOb} from "./interfaces";
 
 
-
 // 1) создать интерфейс на основе этого объекта:
 //
 // {
@@ -40,8 +39,7 @@ import {IOb} from "./interfaces";
 // }
 
 
-
-const obj:IOb = {
+const obj: IOb = {
     mission_name: "Starlink-15 (v1.0)",
     launch_date_local: "2020-10-24T11:31:00-04:00",
     launch_site: {
@@ -79,25 +77,29 @@ const obj:IOb = {
 // ---------------------------------------------------------------------------
 // 2) протипизировать функции:
 //
-    const user:{name:string,age:number,gender:string} = {
-        name:"Max",
-        age:18,
-        gender:'male'
-    }
-
-function sum(a:number,b:number):number{
-    return a+b
+interface IUser {
+    name: string,
+    age: number,
+    gender: string
 }
 
-function showSum(a:number,b:number):void{
+const user: IUser = {
+    name: "Max",
+    age: 18,
+    gender: 'male'
+}
+
+const sum = (a: number, b: number): number => a + b;
+
+const showSum = (a: number, b: number): void => {
     console.log(a + b);
-}
+};
 
- function incAge(someUser:{name:string,age:number,gender:string}, inc:number):object{
-     someUser.age+=inc
-     return someUser
- }
+const incAge = (someUser: IUser, inc: number): IUser => {
+    someUser.age += inc
+    return someUser
+};
 
- console.log(sum(1, 2));
- showSum(2,3)
- incAge(user, 2)
+console.log(sum(1, 2));
+showSum(2, 3)
+incAge(user, 2)
